@@ -1,0 +1,13 @@
+{
+    "name": "kmg23/php",
+    "authors": [
+        {
+            "name": "Mingyu",
+            "email": "kmg2388@naver.com"
+        }
+    ],
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.29",
+        "dompdf/dompdf": "^2.0"
+    }
+}
