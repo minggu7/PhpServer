@@ -51,23 +51,23 @@
                     <label for="item">품명:</label>
                     <input type="text" id="item" name="item" value="<?php echo $row['item']; ?>" required><br>
 
-                    <label for="count">수량:</label>
-                    <input type="text" id="count" name="count" value="<?php echo $row['count']; ?>" required><br>
+                    <label for="quantity">수량:</label>
+                    <input type="text" id="quantity" name="quantity" value="<?php echo $row['quantity']; ?>" required><br>
 
-                    <label for="sell_amount">매출금액:</label>
-                    <input type="text" id="sell_amount" name="sell_amount" value="<?php echo $row['sell_amount']; ?>" required><br>
+                    <label for="supply_amount">매출금액:</label>
+                    <input type="text" id="supply_amount" name="supply_amount" value="<?php echo $row['supply_amount']; ?>" required><br>
 
                     <label for="vat">부가세:</label>
                     <input type="text" id="vat" name="vat" value="<?php echo $row['vat']; ?>" required><br>
 
-                    <label for="total_amount">합계:</label>
-                    <input type="text" id="total_amount" name="total_amount" value="<?php echo $row['total_amount']; ?>" required><br>
+                    <label for="total">합계:</label>
+                    <input type="text" id="total" name="total" value="<?php echo $row['total']; ?>" required><br>
 
-                    <label for="buy_amountt">매입가(수수료):</label>
-                    <input type="text" id="buy_amount" name="buy_amount" value="<?php echo $row['buy_amount']; ?>" required><br>
+                    <label for="buyAmount">매입가(수수료):</label>
+                    <input type="text" id="buyAmount" name="buyAmount" value="<?php echo $row['buyAmount']; ?>" required><br>
 
-                    <label for="sell_profit">매출이익:</label>
-                    <input type="text" id="sell_profit" name="sell_profit" value="<?php echo $row['sell_profit']; ?>" required><br>
+                    <label for="sellProfit">매출이익:</label>
+                    <input type="text" id="sellProfit" name="sellProfit" value="<?php echo $row['sellProfit']; ?>" required><br>
 
                     <label for="profit">이익률:</label>
                     <input type="text" id="profit" name="profit" value="<?php echo $row['profit']; ?>" required><br>
@@ -118,12 +118,12 @@
         var name = document.getElementById('name').value;
         var company = document.getElementById('company').value;
         var item = document.getElementById('item').value;
-        var count = document.getElementById('count').value;
-        var sell_amount = document.getElementById('sell_amount').value;
+        var quantity = document.getElementById('quantity').value;
+        var supply_amount = document.getElementById('supply_amount').value;
         var vat = document.getElementById('vat').value;
-        var total_amount = document.getElementById('total_amount').value;
-        var buy_amount = document.getElementById('buy_amount').value;
-        var sell_profit = document.getElementById('sell_profit').value;
+        var total = document.getElementById('total').value;
+        var buyAmount = document.getElementById('buyAmount').value;
+        var sellProfit = document.getElementById('sellProfit').value;
         var profit = document.getElementById('profit').value;
         var collect = document.getElementById('collect').value;
         var balance = document.getElementById('valance').value;
@@ -157,14 +157,13 @@
             '&date=' + encodeURIComponent(date) +
             '&company=' + encodeURIComponent(company) +
             '&item=' + encodeURIComponent(item) +
-            '&count=' + encodeURIComponent(count) +
-            '&sell_amount=' + encodeURIComponent(sell_amount) +
+            '&quantity=' + encodeURIComponent(quantity) +
+            '&supply_amount=' + encodeURIComponent(supply_amount) +
             '&vat=' + encodeURIComponent(vat) +
-            '&total_amount=' + encodeURIComponent(total_amount) +
-            '&buy_amount=' + encodeURIComponent(buy_amount) +
-            '&sell_profit=' + encodeURIComponent(sell_profit) +
+            '&total=' + encodeURIComponent(total) +
+            '&buyAmount=' + encodeURIComponent(buyAmount) +
+            '&sellProfit=' + encodeURIComponent(sellProfit) +
             '&profit=' + encodeURIComponent(profit) +
-            '&profit=' + encodeURIComponet(profitPercentage) +
             '&collect=' + encodeURIComponet(collect) +
             '&balance=' + encodeURIComponet(balance) +
             '&tax_num=' + encodeURIComponet(tax_num) +

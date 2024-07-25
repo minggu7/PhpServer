@@ -60,8 +60,8 @@
                     <label for="registration_number">등록번호:</label>
                     <input type="text" id="registration_number" name="registration_number" value="<?php echo $row['registration_number']; ?>" required><br>
 
-                    <label for="supply_sell_amount">매출금액:</label>
-                    <input type="text" id="supply_sell_amount" name="supply_sell_amount" value="<?php echo $row['supply_sell_amount']; ?>" required><br>
+                    <label for="supply_amount">매출금액:</label>
+                    <input type="text" id="supply_amount" name="supply_amount" value="<?php echo $row['supply_amount']; ?>" required><br>
 
                     <label for="vat">부가세:</label>
                     <input type="text" id="vat" name="vat" value="<?php echo $row['vat']; ?>" required><br>
@@ -112,7 +112,7 @@
     var company = document.getElementById('company').value;
     var item = document.getElementById('item').value;
     var count = document.getElementById('count').value;
-    var supply_sell_amount = document.getElementById('supply_sell_amount').value;
+    var supply_amount = document.getElementById('supply_amount').value;
     var vat = document.getElementById('vat').value;
     var total_amount = document.getElementById('total_amount').value;
     var calc = document.getElementById('calc').value;
@@ -147,7 +147,7 @@
         'registration_number=' + encodeURIComponent(company) +
         '&item=' + encodeURIComponent(item) +
         '&count=' + encodeURIComponent(count) +
-        '&supply_sell_amount=' + encodeURIComponent(supply_sell_amount) +
+        '&supply_amount=' + encodeURIComponent(supply_amount) +
         '&vat=' + encodeURIComponent(vat) +
         '&total_amount=' + encodeURIComponent(total_amount) +
         '&remarks=' + encodeURIComponent(remarks)+

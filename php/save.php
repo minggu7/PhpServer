@@ -50,7 +50,7 @@ $deposit = $_POST['deposit'];
 if($searchOption === 'records')
     $sql = "INSERT INTO $searchOption (date, company, registration_number, item, supply_amount, vat, total_amount, remarks)
         VALUES ('$date', '$company', '$registration_number', '$item', '$supply_amount', '$vat', '$total_amount', '$remarks')";
-else if($searchOption === 'sell_records') $sql = "INSERT INTO $searchOption (date, name, company, registration_number, item, count, supply_sell_amount, vat, total_amount, calc, section, remarks, deposit)
+else if($searchOption === 'sell_records') $sql = "INSERT INTO $searchOption (date, name, company, registration_number, item, count, supply_amount, vat, total_amount, calc, section, remarks, deposit)
         VALUES ('$date','$name', '$company', '$registration_number', '$item','$count', '$supply_amount', '$vat', '$total_amount',
         '$calc', '$section', '$remarks', '$deposit')";
 

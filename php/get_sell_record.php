@@ -44,7 +44,7 @@ if ($result->num_rows > 0) {
         <td>' . $row['registration_number'] . '</td>
         <td>' . $row['item'] . '</td>
         <td>' . $row['count'] . '</td>
-        <td>' . $row['supply_sell_amount'] . '</td>
+        <td>' . $row['supply_amount'] . '</td>
         <td>' . $row['vat'] . '</td>
         <td>' . $row['total_amount'] . '</td>
         <td>' . $row['calc'] . '</td>
@@ -52,7 +52,7 @@ if ($result->num_rows > 0) {
         <td>' . $row['remarks'] . '</td>
         <td>' . $row['deposit'] . '</td>
                 <td><button onclick="openPopup_sell(\'' . $row['recordID'] . '\')">수정</button></td>
-                <td><button onclick=deleteRecord_sell(' . $row['registration_number'] . ')>삭제</button></td>
+                <td><button onclick=deleteRecord_sell(' . $row['recordID'] . ')>삭제</button></td>
             </tr>';
     }
 } else {
@@ -78,7 +78,7 @@ $conn->close();
         var name = document.getElementById('name').value;
         var item = document.getElementById('item').value;
         var count = document.getElementById('count').value;
-        var supply_sell_amount = document.getElementById('supply_sell_amount').value;
+        var supply_amount = document.getElementById('supply_amount').value;
         var vat = document.getElementById('vat').value;
         var total_amount = document.getElementById('total_amount').value;
         var calc = document.getElementById('calc').value;
@@ -113,7 +113,7 @@ $conn->close();
             '&company=' + encodeURIComponent(company) +
             '&item=' + encodeURIComponent(item) +
             '&count=' + encodeURIComponent(count) +
-            '&supply_sell_amount=' + encodeURIComponent(supply_amount) +
+            '&supply_amount=' + encodeURIComponent(supply_amount) +
             '&vat=' + encodeURIComponent(vat) +
             '&total_amount=' + encodeURIComponent(total_amount) +
             '&calc=' + encodeURIComponent(calc) +

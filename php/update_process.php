@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $registration_number = $_POST['registration_number'];
     $item = $_POST['item'];
     $count = $_POST['count'];
-    $supply_sell_amount = $_POST['supply_sell_amount'];
+    $supply_amount = $_POST['supply_amount'];
     $vat = $_POST['vat'];
     $total_amount = $_POST['total_amount'];
     $calc = $_POST['calc'];
@@ -55,8 +55,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!empty($count)) {
         $updates[] = "count = $count";
     }
-    if (!empty($supply_sell_amount)) {
-        $updates[] = "supply_sell_amount = $supply_sell_amount";
+    if (!empty($supply_amount)) {
+        $updates[] = "supply_amount = $supply_amount";
     }
     if (!empty($vat)) {
         $updates[] = "vat = $vat";
