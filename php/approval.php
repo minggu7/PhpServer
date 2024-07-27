@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 }
 
 // SQL 쿼리 작성
-$sql = "SELECT r.date, r.company, r.item, r.supply_sell_amount, s.supply_amount, r.count, r.name
+$sql = "SELECT r.date, r.company, r.item, r.supply_amount AS supply_sell_amount, s.supply_amount, r.count, r.name
         FROM sell_records r
         JOIN records s ON r.date = s.date AND r.company = s.company AND r.item = s.item";
 
@@ -29,14 +29,14 @@ if ($result->num_rows > 0) {
         $date = $row['date'];
         $company = $row['company'];
         $item = $row['item'];
-        $supplyAmount = $row['supply_sell_amount'];
+        $supply_sell_Amount = $row['supply_sell_amount'];
         $count = $row['count'];
 
-        $vat = $supplyAmount * 0.1;
-        $total = $supplyAmount * $count;
+        $vat = $supply_sell_Amount * 0.1;
+        $total = $supply_sell_Amount * $count;
         $buyAmount = $row['supply_amount'];
-        $sellProfit = ($supplyAmount - $buyAmount) * $count;
-        $profitPercentage = ($sellProfit / $supplyAmount) * 100;
+        $sellProfit = ($supply_sell_Amount - $buyAmount) * $count;
+        $profitPercentage = ($sellProfit / $supply_sell_Amount) * 100;
 
 
     }
@@ -579,7 +579,6 @@ $conn->close();
 
 <script language = "javascript">
     function save_pdf() {
-
 
         const doc = new jsPDF({
             //orientation: "landscape",

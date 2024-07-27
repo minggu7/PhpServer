@@ -45,7 +45,7 @@ if (isset($_GET['logout'])) {
 
             // 서버로 품의서 내용을 전송하고 PDF 파일로 저장하는 요청을 보냅니다.
             $.ajax({
-                url: 'save_approval.php',
+                url: 'approval_save.php',
                 type: 'POST',
                 data: { content: proposalContent },
                 success: function (response) {
